@@ -50,16 +50,6 @@ with open(file_to_load) as election_data:
         # add to candidate's vote count
         candidate_votes[candidate_name] +=1
 
-
-
-#print(total_votes)
-
-# print candidate list
-# print(candidate_options)
-
-# pritn candidate vote dictionary
-# print(candidate_votes)
-
 # loopo through candidate list
 for candidate_name in candidate_votes:
     # retrieve candidate's vote count
@@ -80,11 +70,13 @@ for candidate_name in candidate_votes:
         # sets winning_candidate equalt to candidate's name
         winning_candidate = candidate_name
 
+# create variable to hold winning candidate summary
 winning_candidate_summary = (
     f'-------------------------\n'
     f'Winner: {winning_candidate}\n'
     f'Winning Vote Count: {winning_count}\n'
     f'Winning Percentage: {winning_percentage:.1f}%\n'
     f'-------------------------\n')
-    
+
+#print winning candidate summary    
 print(winning_candidate_summary)
